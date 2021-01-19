@@ -10,6 +10,8 @@ class homeController extends controller {
     public function index() {
         $dados = array();
 
+        $dados['home'] = true;
+
         $this->loadTemplate('home', $dados);
     }
 

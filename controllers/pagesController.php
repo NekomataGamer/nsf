@@ -1,11 +1,13 @@
 <?php
 class pagesController extends Controller{
     public function sobre(){
-        $this->loadTemplate('sobre', array());
+        $dados['home'] = false;
+        
+        $this->loadTemplate('sobre', $dados);
     }
     public function cursos(){
         $dados = array();
-
+        $dados['home'] = false;
         $dados['cursos'] = array(
             array(
                 'title'=>'ADMINISTRAÇÃO',
@@ -81,5 +83,25 @@ class pagesController extends Controller{
             )
         );
         $this->loadTemplate('cursos', $dados);
+    }
+
+    public function ingressar(){
+        $dados['home'] = false;
+        $this->loadTemplate('ingressar', $dados);
+    }
+
+    public function npj(){
+        $dados['home'] = false;
+        $this->loadTemplate('npj', $dados);
+    }
+
+    public function fale_conosco(){
+        $dados['home'] = false;
+        $this->loadTemplate('fale_conosco', $dados);
+    }
+
+    public function trabalhe_conosco(){
+        $dados['home'] = false;
+        $this->loadTemplate('trabalhe_conosco', $dados);
     }
 }

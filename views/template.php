@@ -40,7 +40,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
     <header>	
 	<nav class="mnu navbar-light">
             <div class="logo" id="logo">
-                <h1><a href="index.html"><img src="<?php echo BASE_URL;?>assets/images/logo-icon.png" style="width: 150px; margin: 0px;" /></a></h1>
+                <h1><a href="<?php echo BASE_URL;?>"><img src="<?php echo BASE_URL;?>assets/images/logo-icon-negativa.png" style="width: 90px; margin: -25px 0;" /></a></h1>
             </div>
 				<label for="drop" class="toggle"><span class="fa fa-bars"></span></label>
                 <input type="checkbox" id="drop">
@@ -51,40 +51,41 @@ License URL: http://creativecommons.org/licenses/by/3.0/
                             <label for="drop-2" class="toggle">NSF <span class="fa fa-angle-down" aria-hidden="true"></span> </label>
                             <a href="#">NSF <span class="fa fa-angle-down" aria-hidden="true"></span></a>
                             <input type="checkbox" id="drop-2" />
-                            <ul>
+                            <ul style="box-shadow: 2px 2px 2px #aaa;">
                               <li><a href="<?php echo BASE_URL;?>pages/sobre/">Sobre Nós</a></li>
 								<!-- <li><a href="<?php echo BASE_URL;?>pages/sobre">Agenda</a></li> -->
 								<!-- <li><a href="<?php echo BASE_URL;?>pages/sobre">Blog</a></li> -->
                             </ul>
                         </li>
-						<li class="mr-lg-4 mr-3"><a href="<?php echo BASE_URL;?>pages/cursos/cursos">Cursos</a></li>
-                        <li class="mr-lg-4 mr-3"><a href="<?php echo BASE_URL;?>pages/ingressar/ingressar">Ingressar</a></li>
+						<li class="mr-lg-4 mr-3"><a href="<?php echo BASE_URL;?>pages/cursos">Cursos</a></li>
+                        <li class="mr-lg-4 mr-3"><a href="<?php echo BASE_URL;?>pages/ingressar">Ingressar</a></li>
 						<li class="mr-lg-4 mr-3">
                             <!-- First Tier Drop Down -->
                             <label for="drop-2" class="toggle">Serviços <span class="fa fa-angle-down" aria-hidden="true"></span> </label>
                             <a href="#">Serviços <span class="fa fa-angle-down" aria-hidden="true"></span></a>
                             <input type="checkbox" id="drop-2" />
-                            <ul>
-								<li><a href="<?php echo BASE_URL;?>pages/npj/npj">NPJ</a></li>
+                            <ul style="box-shadow: 2px 2px 2px #aaa;">
+								<li><a href="<?php echo BASE_URL;?>pages/npj">NPJ</a></li>
                             </ul>
                         </li>
 						<li class="mr-lg-4 mr-3">
                             <!-- First Tier Drop Down -->
-                            <label for="drop-2" class="toggle">Serviços <span class="fa fa-angle-down" aria-hidden="true"></span> </label>
-                            <a href="#">Serviços <span class="fa fa-angle-down" aria-hidden="true"></span></a>
+                            <label for="drop-2" class="toggle">Contato <span class="fa fa-angle-down" aria-hidden="true"></span> </label>
+                            <a href="#">Contato <span class="fa fa-angle-down" aria-hidden="true"></span></a>
                             <input type="checkbox" id="drop-2" />
-                            <ul>
-								<li><a href="<?php echo BASE_URL;?>pages/fale-conosco/fale-conosco">Fale Conosco</a></li>
-								<li><a href="<?php echo BASE_URL;?>pages/trabalhe-conosco/trabalhe-conosco">Trabalhe Conosco</a></li>
+                            <ul style="box-shadow: 2px 2px 2px #aaa;">
+								<li><a href="<?php echo BASE_URL;?>pages/fale_conosco/">Fale Conosco</a></li>
+								<li><a href="<?php echo BASE_URL;?>pages/trabalhe_conosco/">Trabalhe Conosco</a></li>
 							</ul>
 							
                         </li>
-                        <li><a href="edukante.com/fatima/" target="_blank">Minha NSF</a></li>
+                        <li><a href="https://edukante.com/fatima/" target="_blank">Minha NSF</a></li>
                     </ul>
     </nav>
 </header>
 <!-- //header -->
-        <div class="container" style="">
+        <div class="container" style="<?= ($viewData['home'] == false)?'height: 100px;':'';?>">
+		<?php if($viewData['home'] !== false):?>
             <!-- banner-text -->
             <div class="banner-text">
                 <div class="slider-info" style="text-align: left !important; margin-left: 0px !important;">
@@ -92,31 +93,33 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 					<h4 style="color: #fff;">Inscreva-se Abaixo</h4>
 				</div>
             </div>
-			<div class="banner-top pb-5">
-                <div class="row slider-bottom">
-                    <div class="col-md-3 slider-bottom-lft">
-						<h4>Inscreva-se!</h4>
-						<!-- <p class="text-white mt-2">Nosso Suporte entrará em contato com você através desses dados</p> -->
-					</div>
-					 <div class="col-md-9 n-right-w3ls">
-						<div class="row">
-							<div class="col-md-4 form-group news-rt">
-								<input class="form-control" type="text" name="nome" placeholder="Nome Completo" required="">
-							</div>
-							<div class="col-md-4 form-group news-lt">
-								<input class="form-control" type="text" name="telefone" placeholder=" Telefone" required="" id="telefone">
-							</div>
-							<div class="col-md-4 form-group news-last">
-								<div class="sbm-it">
-									<div class="form-group">
-										<input class="form-control submit text-uppercase" type="submit" value="Inscrever">
+			
+				<div class="banner-top pb-5">
+					<div class="row slider-bottom">
+						<div class="col-md-3 slider-bottom-lft">
+							<h4>Inscreva-se!</h4>
+							<!-- <p class="text-white mt-2">Nosso Suporte entrará em contato com você através desses dados</p> -->
+						</div>
+						<div class="col-md-9 n-right-w3ls">
+							<div class="row">
+								<div class="col-md-4 form-group news-rt">
+									<input class="form-control" type="text" name="nome" placeholder="Nome Completo" required="">
+								</div>
+								<div class="col-md-4 form-group news-lt">
+									<input class="form-control" type="text" name="telefone" placeholder=" Telefone" required="" id="telefone">
+								</div>
+								<div class="col-md-4 form-group news-last">
+									<div class="sbm-it">
+										<div class="form-group">
+											<input class="form-control submit text-uppercase" type="submit" value="Inscrever">
+										</div>
 									</div>
 								</div>
 							</div>
 						</div>
 					</div>
 				</div>
-            </div>
+			<?php endif;?>
         </div>
     </div>
 	 <!-- //banner-text -->
